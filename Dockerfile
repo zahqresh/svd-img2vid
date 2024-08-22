@@ -13,8 +13,13 @@ RUN pip install --no-cache-dir --upgrade pip && \
 RUN pip install runpod
 RUN pip install torch
 RUN pip install uuid
+RUN pip install boto3
 RUN pip install requests
 RUN pip install diffusers
+RUN pip install transformers
+RUN pip install accelerate>=0.17.0
+RUN pip install opencv-python
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 # Add your file
 ADD img2vid.py .
 
